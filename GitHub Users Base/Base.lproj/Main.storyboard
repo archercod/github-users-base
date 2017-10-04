@@ -43,7 +43,6 @@
                                 <state key="normal" title="Show"/>
                                 <connections>
                                     <action selector="showPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6cp-lt-PdF"/>
-                                    <segue destination="svD-Bn-kFo" kind="show" id="Yfm-9f-izI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,16 +65,17 @@
                     <connections>
                         <outlet property="loginTextField" destination="Wlv-2i-07B" id="3Uu-mF-RPw"/>
                         <outlet property="showButton" destination="gJW-TX-tH2" id="rOt-vJ-hNp"/>
+                        <segue destination="svD-Bn-kFo" kind="show" identifier="userDetails" id="pFR-bH-9nm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="456.80000000000001" y="118.29085457271366"/>
         </scene>
-        <!--View Controller-->
+        <!--User Details Controller-->
         <scene sceneID="diM-Nf-88Q">
             <objects>
-                <viewController id="svD-Bn-kFo" sceneMemberID="viewController">
+                <viewController id="svD-Bn-kFo" customClass="UserDetailsController" customModule="GitHub_Users_Base" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ixx-S3-Woz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yiY-gx-3Dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128.8" y="117.39130434782609"/>
+            <point key="canvasLocation" x="1242" y="118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Okb-Wt-2Sg">

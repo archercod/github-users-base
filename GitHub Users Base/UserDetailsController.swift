@@ -9,10 +9,12 @@
 import UIKit
 
 class UserDetailsController: UIViewController {
+    
+    var userName = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+ 
     }
 
 }

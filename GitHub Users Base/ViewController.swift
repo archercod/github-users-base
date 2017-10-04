@@ -27,6 +27,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showPressed(_ sender: Any) {
+        if loginTextField.text != "" {
+            performSegue(withIdentifier: "userDetails", sender: self)
+        } else {
+            emptyTextFieldAlert()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let userDetailsController = segue.destination as! UserDetailsController
+        userDetailsController.userName = loginTextField.text!
+    }
+    
+    func emptyTextFieldAlert() {
+        let alertController = UIAlertController(title: "Empty text field", message: "Please enter GitHub member user name and tap show button", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
 }

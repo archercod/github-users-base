@@ -14,6 +14,7 @@
 		EAEE6D0A1F84C95D000AAA2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAEE6D081F84C95D000AAA2B /* LaunchScreen.storyboard */; };
 		EAEE6D121F84CFAB000AAA2B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE6D111F84CFAB000AAA2B /* User.swift */; };
 		EAEE6D141F84F11C000AAA2B /* UserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE6D131F84F11C000AAA2B /* UserDetailsController.swift */; };
+		EAEE6D181F850F7B000AAA2B /* BackendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE6D171F850F7B000AAA2B /* BackendError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EAEE6D0B1F84C95D000AAA2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAEE6D111F84CFAB000AAA2B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EAEE6D131F84F11C000AAA2B /* UserDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsController.swift; sourceTree = "<group>"; };
+		EAEE6D171F850F7B000AAA2B /* BackendError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				EAEE6D011F84C95D000AAA2B /* ViewController.swift */,
 				EAEE6D131F84F11C000AAA2B /* UserDetailsController.swift */,
 				EAEE6D111F84CFAB000AAA2B /* User.swift */,
+				EAEE6D171F850F7B000AAA2B /* BackendError.swift */,
 				EAEE6D031F84C95D000AAA2B /* Main.storyboard */,
 				EAEE6D061F84C95D000AAA2B /* Assets.xcassets */,
 				EAEE6D081F84C95D000AAA2B /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 				EAEE6D001F84C95D000AAA2B /* AppDelegate.swift in Sources */,
 				EAEE6D121F84CFAB000AAA2B /* User.swift in Sources */,
 				EAEE6D141F84F11C000AAA2B /* UserDetailsController.swift in Sources */,
+				EAEE6D181F850F7B000AAA2B /* BackendError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

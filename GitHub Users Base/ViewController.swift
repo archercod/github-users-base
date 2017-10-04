@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let userDetailsController = segue.destination as! UserDetailsController
-        userDetailsController.userName = loginTextField.text!
+        userDetailsController.userNameKey = loginTextField.text!
     }
     
     func emptyTextFieldAlert() {

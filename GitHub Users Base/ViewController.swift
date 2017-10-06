@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         showButton.layer.cornerRadius = 15.0
         loginTextField.layer.cornerRadius = 15.0
         loginTextField.layer.borderWidth = 2.0
+
     }
 
     override func didReceiveMemoryWarning() {

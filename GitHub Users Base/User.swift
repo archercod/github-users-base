@@ -15,9 +15,9 @@ struct User {
     let name: String
     let location: String
     let bio: String
-    let repos: String
-    let followers: String
-    let following: String
+    let repos: Int
+    let followers: Int
+    let following: Int
 }
 
 extension User {
@@ -41,9 +41,9 @@ extension User {
         let nameString = json[Key.name] as? String,
         let locationString = json[Key.location] as? String,
         let bioString = json[Key.bio] as? String,
-        let reposValue = json[Key.repos] as? String,
-        let followersValue = json[Key.followers] as? String,
-        let followingValue = json[Key.following] as? String else { return nil }
+        let reposValue = json[Key.repos] as? Int,
+        let followersValue = json[Key.followers] as? Int,
+        let followingValue = json[Key.following] as? Int else { return nil }
         
         self.login = loginString
         self.avatar = avatarURL
@@ -86,8 +86,9 @@ extension User {
             
             DispatchQueue.main.async {
                 do {
-                    if let userJSON = try JSONSerialization.jsonObject(with: responseData, options: []) as? [String: AnyObject], let user = User(json: userJSON) {
+                    if let userJSON = try JSONSerialization.jsonObject(with: responseData, options: .allowFragments) as? [String: AnyObject], let user = User(json: userJSON) {
                         print(user)
+                        
                     } else {
                         let error = BackendError.objectSerialization(reason: "Couldn't create a user from the JSON")
                         completionHandler(nil, error)

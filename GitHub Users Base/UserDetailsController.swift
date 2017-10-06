@@ -11,6 +11,7 @@ import UIKit
 class UserDetailsController: UIViewController {
     
     var userNameKey = String()
+    var user: User?
     
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
@@ -27,7 +28,6 @@ class UserDetailsController: UIViewController {
         getUser(userNameKey)
         
     }
-    
 }
 
 extension UserDetailsController {
@@ -41,15 +41,26 @@ extension UserDetailsController {
             }
             
             guard let user = user else {
-                print("results is nil")
+                print("Results is nil")
                 return
             }
+            
+            let viewModel = UserViewModel(model: user)
+            self.displayUser(using: viewModel)
             
             debugPrint(user)
             print(user.name)
         }
     }
     
+    func displayUser(using viewModel: UserViewModel) {
+        userName.text = viewModel.name
+        userLogin.text = viewModel.login
+        userLocation.text = viewModel.location
+        userRepos.text = String(viewModel.repos)
+        userFollowing.text = String(viewModel.following)
+        userFollowers.text = String(viewModel.followers)
+    }
 }
 
 

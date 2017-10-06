@@ -25,6 +25,7 @@ class UserDetailsController: UIViewController {
         super.viewDidLoad()
         
         getUser(userNameKey)
+        
     }
     
 }
@@ -44,13 +45,14 @@ extension UserDetailsController {
                 return
             }
             
-            
-            
             debugPrint(user)
             print(user.name)
         }
     }
+    
 }
+
+
 
 
 
